@@ -18,8 +18,9 @@ Route::get('/', function () {
     return view('index');
 });
 
-Route::get('/login',function()
-{
-    return view('login');
-});
-Route::post('/login','UsersController@store');
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
+Route::get('/home/search','SearchController@index');
+Route::post('/home/search','SearchController@search');

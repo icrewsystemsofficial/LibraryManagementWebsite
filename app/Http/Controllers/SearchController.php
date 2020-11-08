@@ -3,10 +3,9 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\User;
 use DB;
 
-class UsersController extends Controller
+class SearchController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -15,7 +14,8 @@ class UsersController extends Controller
      */
     public function index()
     {
-        //
+        return view('search.search');
+
     }
 
     /**
@@ -23,7 +23,15 @@ class UsersController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function create()
+
+    public function search()
+    {
+        $search_text = $_GET['query'];
+        $books=DB::table('books')->where('title','LIKE','%'.$search_text."%")->get();
+
+        return view('search.search',compact('books'));
+    }
+        public function create()
     {
         //
     }
@@ -36,24 +44,8 @@ class UsersController extends Controller
      */
     public function store(Request $request)
     {
-        $this->validate($request,[
-            'name'=>'required',
-            'email'=> 'required',
-            'phone'=> 'required',
-            'gender'=>'required'
-        ]);
-
-        //Create user
-        $user =  New User;
-        $user->name = $request->input('name');
-        $user->email = $request->input('email');
-        $user->phone = $request->input('phone');
-        $user->gender = $request->input('gender');
-
-        die('hello');
-
+        //
     }
-
 
     /**
      * Display the specified resource.

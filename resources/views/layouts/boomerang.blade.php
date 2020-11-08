@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="Probably the most complete UI kit out there. Multiple functionalities and controls added,  extended color palette and beautiful typography, designed as its own extended version of Bootstrap at  the highest level of quality.                             ">
     <meta name="author" content="Webpixels">
-    <title>Bookworm Library</title>
+    <title>Literarium Library</title>
     <!-- Fonts -->
     <link href="https://fonts.googleapis.com/css?family=Nunito:400,600,700,800|Roboto:400,500,700" rel="stylesheet">
     <!-- Theme CSS -->
@@ -16,7 +16,7 @@
   <body>
     <nav class="navbar navbar-expand-lg  navbar-dark bg-dark py-4">
         <div class="container">
-          <a class="navbar-brand " href="./"><strong>Bookworm</strong> Library</a>
+          <a class="navbar-brand " href="./"><strong>Literarium</strong> Library</a>
           <button class="navbar-toggler" type="button" data-action="offcanvas-open" data-target="#navbar_main" aria-controls="navbar_main" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
           </button>
@@ -36,10 +36,10 @@
                 </div>
               </li>
               <li class="nav-item active">
-                <a class="nav-link" href="./docs/introduction.html">My TBR</a>
+                <a class="nav-link" href="./docs/introduction.html">About Us</a>
               </li>
               <li class="nav-item active">
-                <a class="nav-link" href="./docs/introduction.html">Contact Us</a>
+                <a class="nav-link" href="./docs/introduction.html">Get in touch</a>
               </li>
             </ul>
           </div>
@@ -54,9 +54,11 @@
               <div class="row cols-xs-space align-items-center text-center text-md-left justify-content-center">
                 <div class="col-7">
                   <div class="text-center mt-5">
-                  <img src="{{asset('boomerang/assets/images/brand/booklogo.jpeg')}}" style="width: 200px;" class="img-fluid animated bg-dark" data-animation-in="jackInTheBox" data-animation-delay="1000">
+                  <!-- LOGO
+                    <img src="{{asset('boomerang/assets/images/brand/booklogo.jpeg')}}" style="width: 200px;" class="img-fluid animated bg-dark" data-animation-in="jackInTheBox" data-animation-delay="1000">
+                  -->
                     <h2 class="heading display-4 font-weight-400 text-white mt-5 animated" data-animation-in="fadeInUp" data-animation-delay="2000">
-                      <span class="font-weight-700">Bookworm</span> Library
+                      <span class="font-weight-700">Literarium</span> Library
                     </h2>
                     <p class="lead text-white mt-3 lh-180 c-white animated" data-animation-in="fadeInUp" data-animation-delay="2500">
                       Welcome, Bookoholics! Become a member today and get access to thousands of books from different genres. <strong class="text-white"></strong>
