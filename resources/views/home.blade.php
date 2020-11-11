@@ -19,11 +19,10 @@
                         <form action="{{route('search')}}" method="GET" class="navbar-search__form">
                                 <div class="row">
                                     <div class="col-lg-10">
-                                        <div class="form-group">
+                                        <div class="form-group" style="display:flex">
                                             <input type="text" class="form-control" value="" name="query" id="query"
                                                 placeholder="Search">
-                                            <button class="navbar-search__button">
-                                                <i class="fa fa-search"></i>
+                                            <button class="btn btn-dark navbar-search__button"> Search
                                             </button>
                                         </div>
                                     </div>

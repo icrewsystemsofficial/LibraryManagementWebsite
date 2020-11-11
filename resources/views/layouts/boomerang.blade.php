@@ -23,6 +23,14 @@
           <div class="navbar-collapse offcanvas-collapse" id="navbar_main">
             <ul class="navbar-nav ml-auto align-items-lg-center">
               <h6 class="dropdown-header font-weight-600 d-lg-none px-0">Menu</h6>
+              @section('searchbar')
+              <div class="form-group">
+                <input type="text" class="form-control" value="" name="query" id="query"
+                    placeholder="Search">
+                <button class="btn btn-dark navbar-search__button"> Search
+                </button>
+             </div>
+             @endsection
               <li class="nav-item active ">
                 <a class="nav-link btn " href="./login" >Login/Sign Up</a>
               </li>
@@ -61,18 +69,13 @@
           </div>
         </div>
     </main>
-    <div class="container bg-gradient-indigo">
-        <div class="row ">
-            <h2 class="heading display-4 font-weight-400 text-white mt-5">Member Benefits</h2>
-        </div>
-    </div>
     <footer class="pt-3 pb-2 footer  footer-dark bg-tertiary">
       <div class="container">
         <div class="row">
         <hr>
         <div class="d-flex align-items-center">
           <span class="">
-            &copy; 2018 <a href="https://webpixels.io/" class="footer-link" target="_blank">Webpixels</a>. All rights reserved.
+            &copy; 2020 <a href="https://webpixels.io/" class="footer-link" target="_blank">Literarium</a>. All rights reserved.
           </span>
           <ul class="nav ml-lg-auto">
             <li class="nav-item">

@@ -41,6 +41,8 @@
                                 </li>
                             @endif
                         @else
+                        <li>
+                        </li>
                         <li class="nav-item active">
                             <a class="nav-link" href="./docs/introduction.html">My TBR</a>
                           </li>
@@ -75,8 +77,25 @@
 
         </main>
     </div>
+    <div class="navabar-search">
+        <form action="{{route('search')}}" method="GET" class="navbar-search__form">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8">
+                <div class="form-group" style="display:flex">
+        <input type="text" class="form-control" value="" name="query" id="query"
+            placeholder="Search">
+        <button class="btn btn-dark navbar-search__button"> Search
+        </button>
+             </div>
+        </div>
+        </div>
+    </div>
+        </form>
+    </div>
+
     <div class="container"></div>
-    <div class="row-md-">
+    <div class="row-md-10">
         @if(count($books)>0)
             @foreach($books as $book)
             <div class="card-wrapper col-md-10">
@@ -87,7 +106,7 @@
                     <h4><strong>Author: </strong>{{$book->Author}}</h4>
                     <h4><strong>Genre: </strong>{{$book->Genre}}</h4>
                 <form action = "{{route('addToTBR')}}" method="POST">
-                    <button class="btn btn-secondary mr-auto">Add to my TBR</button>
+                    <button class="btn btn-primary mr-auto" type="submit">Add to my TBR</button>
                     </form>
                 </div>
                 <br>
