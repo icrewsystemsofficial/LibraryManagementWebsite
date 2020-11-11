@@ -14,9 +14,27 @@
                         </div>
                     @endif
                     <p class= "font-weight-bold"> Welcome, {{Auth::user()->name}}!</p>
+
+                    <div class="navabar-search">
+                        <form action="{{route('search')}}" method="GET" class="navbar-search__form">
+                                <div class="row">
+                                    <div class="col-lg-10">
+                                        <div class="form-group">
+                                            <input type="text" class="form-control" value="" name="query" id="query"
+                                                placeholder="Search">
+                                            <button class="navbar-search__button">
+                                                <i class="fa fa-search"></i>
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+
                 </div>
             </div>
         </div>
     </div>
 </div>
 @endsection
+

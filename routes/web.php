@@ -17,10 +17,17 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('index');
 });
+Route::get('/contact',function(){
+    return view('contact');
+});
+Route::get('/about',function(){
+    return view('about');
+});
 
 
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
-Route::get('/home/search','SearchController@index');
-Route::post('/home/search','SearchController@search');
+Route::get('/home/search','SearchController@index')->name('search');
+Route::get('/home/search/{book}','SearchController@show')->name('show');
+Route::post('/home/search','TBRController@store')->name('addToTBR');

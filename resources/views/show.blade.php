@@ -1,25 +1,20 @@
-<!doctype html>
-<html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
-<head>
+
+<!DOCTYPE html>
+<html>
+  <head>
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-
-    <!-- CSRF Token -->
-    <meta name="csrf-token" content="{{ csrf_token() }}">
-
-    <title>Login</title>
-
-    <!-- Scripts -->
-    <script src="{{ asset('js/app.js') }}" defer></script>
-
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="Probably the most complete UI kit out there. Multiple functionalities and controls added,  extended color palette and beautiful typography, designed as its own extended version of Bootstrap at  the highest level of quality.                             ">
+    <meta name="author" content="Webpixels">
+    <title>Literarium Library</title>
     <!-- Fonts -->
-    <link rel="dns-prefetch" href="//fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
-
-    <!-- Styles -->
+    <link href="https://fonts.googleapis.com/css?family=Nunito:400,600,700,800|Roboto:400,500,700" rel="stylesheet">
+    <!-- Theme CSS -->
     <link type="text/css" href="{{ asset('boomerang/assets/css/theme.css') }}" rel="stylesheet">
-</head>
-<body>
+    <!-- Demo CSS - No need to use these in your project -->
+    <link type="text/css" href="{{ asset('boomerang/assets/css/demo.css') }}" rel="stylesheet">
+  </head>
+  <body>
     <div id="app">
         <nav class="navbar navbar-expand-md navbar-dark bg-dark py-4">
             <div class="container">
@@ -33,9 +28,7 @@
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <!-- Left Side Of Navbar -->
                     <ul class="navbar-nav mr-auto">
-
                     </ul>
-
                     <!-- Right Side Of Navbar -->
                     <ul class="navbar-nav ml-auto">
                         <!-- Authentication Links -->
@@ -49,9 +42,6 @@
                                 </li>
                             @endif
                         @else
-                        <li class="nav-item active ">
-                            <a class="nav-link" href="./home/search" id="navbar_main_dropdown_1" role="button"  aria-haspopup="true" aria-expanded="false">Browse Books</a>
-                          </li>
                         <li class="nav-item active">
                             <a class="nav-link" href="./docs/introduction.html">My TBR</a>
                           </li>
@@ -81,10 +71,19 @@
             </div>
         </nav>
 
-        <main class="py-4">
-            @yield('content')
 
-        </main>
     </div>
-</body>
+    <div id="wrapper">
+        <div id="page" class="container">
+            <div id="content">
+                <div class="title">
+                    <h2>{{ $book->Title }}</h2>
+                 </div>
+                <p>
+                 </p>
+                {!! $book->about !!}
+            </div>
+        </div>
+    </div>
+  </body>
 </html>

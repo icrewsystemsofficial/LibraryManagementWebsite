@@ -26,20 +26,11 @@
               <li class="nav-item active ">
                 <a class="nav-link btn " href="./login" >Login/Sign Up</a>
               </li>
-              <li class="nav-item dropdown nav-item active ">
-                <a class="nav-link dropdown-toggle nav-link btn " href="#" id="navbar_main_dropdown_1" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Browse Books</a>
-                <div class="dropdown-menu" aria-labelledby="navbar_1_dropdown_1">
-                  <a class="dropdown-item" href="./pages/homepage.html">Homepage</a>
-                  <a class="dropdown-item" href="./pages/about.html">About us</a>
-                  <a class="dropdown-item" href="./pages/sign-in.html">Sign in</a>
-                  <a class="dropdown-item" href="./pages/contact.html">Contact</a>
-                </div>
+              <li class="nav-item active">
+                <a class="nav-link" href="./about">About Us</a>
               </li>
               <li class="nav-item active">
-                <a class="nav-link" href="./docs/introduction.html">About Us</a>
-              </li>
-              <li class="nav-item active">
-                <a class="nav-link" href="./docs/introduction.html">Get in touch</a>
+                <a class="nav-link" href="./contact">Get in touch</a>
               </li>
             </ul>
           </div>
@@ -70,6 +61,11 @@
           </div>
         </div>
     </main>
+    <div class="container bg-gradient-indigo">
+        <div class="row ">
+            <h2 class="heading display-4 font-weight-400 text-white mt-5">Member Benefits</h2>
+        </div>
+    </div>
     <footer class="pt-3 pb-2 footer  footer-dark bg-tertiary">
       <div class="container">
         <div class="row">

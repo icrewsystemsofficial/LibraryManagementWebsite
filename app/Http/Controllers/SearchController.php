@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Book;
 use DB;
 
 class SearchController extends Controller
@@ -12,26 +13,24 @@ class SearchController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function index(Request $request)
     {
-        return view('search.search');
+        $request->validate([
+            'query'=>'required'
+        ]);
+        $query = $request->input('query');
+        //
+        $books = Book::where('Title','like',"%$query%")->paginate(10);
+        return view('/searched-results',compact('books'));
+
 
     }
-
     /**
      * Show the form for creating a new resource.
      *
      * @return \Illuminate\Http\Response
      */
-
-    public function search()
-    {
-        $search_text = $_GET['query'];
-        $books=DB::table('books')->where('title','LIKE','%'.$search_text."%")->get();
-
-        return view('search.search',compact('books'));
-    }
-        public function create()
+    public function create()
     {
         //
     }
@@ -53,9 +52,9 @@ class SearchController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show($id)
+    public function show(Book $book)
     {
-        //
+        return view('show',['book'=> $book ]);
     }
 
     /**
